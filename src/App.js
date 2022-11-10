@@ -11,6 +11,7 @@ const Coin = ({
   marketcap,
   volume,
   image,
+  totalSupply,
   priceChange
 }) => {
   return (
@@ -24,13 +25,13 @@ const Coin = ({
         <ul className='coin-data'>
           <li className='coin-price'>Current Price: ${price}</li>
           <li className='coin-volume'>Volume: ${volume.toLocaleString()}</li>
-
+          
           {priceChange < 0 ? (
             <li className='coin-percent-down'>Percent Down:  {priceChange.toFixed(3)}%</li>
           ) : (
             <li className='coin-percent-up'>Percent Up: {priceChange.toFixed(3)}%</li>
           )}
-
+          <li className='coin-total-supply'> Total Supply: {totalSupply}</li>
           <li className='coin-marketcap'>
             Mkt Cap: ${marketcap.toLocaleString()}
           </li>
@@ -89,6 +90,7 @@ function App() {
             marketcap={coin.market_cap}
             volume={coin.total_volume}
             image={coin.image}
+            totalSupply={coin.total_supply}
             priceChange={coin.price_change_percentage_24h}
           />
         );
