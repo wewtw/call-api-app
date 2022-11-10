@@ -16,7 +16,7 @@ const Coin = ({
   return (
     <div className='coin-container'>
       <ul className='coin-row'>
-        <li className='coin' id='coin'>
+        <li className='coin'>
           <img src={image} alt='crypto' />
           <h3>{name}</h3>
           <p className='coin-symbol'>Symbol: {symbol}</p>
