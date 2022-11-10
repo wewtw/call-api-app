@@ -28,7 +28,7 @@ const Coin = ({
           {priceChange < 0 ? (
             <li className='coin-percent-down'>Percent Down:  {priceChange.toFixed(3)}%</li>
           ) : (
-            <li className='coin-percent-up'>Percent Up{priceChange.toFixed(3)}%</li>
+            <li className='coin-percent-up'>Percent Up: {priceChange.toFixed(3)}%</li>
           )}
 
           <li className='coin-marketcap'>
