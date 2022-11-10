@@ -9,6 +9,7 @@ const Coin = ({
   price,
   symbol,
   marketcap,
+  rank,
   volume,
   image,
   totalSupply,
@@ -21,6 +22,7 @@ const Coin = ({
           <img src={image} alt='crypto' />
           <h3>{name}</h3>
           <p className='coin-symbol'>Symbol: {symbol}</p>
+          <p className='coin-rank'>Rank: {rank}</p>
         </li>
         <ul className='coin-data'>
           <li className='coin-price'>Current Price: ${price}</li>
@@ -87,6 +89,7 @@ function App() {
             name={coin.name}
             price={coin.current_price}
             symbol={coin.symbol}
+            rank={coin.market_cap_rank}
             marketcap={coin.market_cap}
             volume={coin.total_volume}
             image={coin.image}
